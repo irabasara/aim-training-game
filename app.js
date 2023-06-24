@@ -30,7 +30,6 @@ timeList.addEventListener("click", (e) => {
   startGame();
 });
 
-// startGame();
 function startGame() {
   setInterval(decreaseTime, 1000);
   setTime(time);
@@ -39,12 +38,9 @@ function startGame() {
 
 function decreaseTime() {
   if (time === 0) {
-    // console.log("finish");
     finishGame();
   } else {
     let currentTime = --time;
-
-    // time -= 1;
     if (currentTime < 10) {
       currentTime = `0${currentTime}`;
     }
@@ -73,7 +69,6 @@ function createCircle() {
 
   board.append(circle);
 }
-// startGame();
 
 function finishGame() {
   timer.parentNode.classList.add("hide");
